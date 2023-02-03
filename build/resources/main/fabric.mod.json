@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "drcats-aos",
+	"version": "1.0.0",
+	"name": "DrCat's Assortment of Stuffs",
+	"description": "A mod that contains an assortment of random stuff because why not.",
+	"authors": [
+		"ItsDrCat"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/drcats-aos/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"drcat.aosmod.DrCatAOSmain"
+		],
+		"client": [
+			"drcat.aosmod.DrCatAOSclient"
+		]
+	},
+	"mixins": [
+		"drcats-aos.mixins.json",
+		{
+			"config": "drcats-aos.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.14.13",
+		"minecraft": "~1.19.3",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
